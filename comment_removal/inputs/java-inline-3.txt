@@ -1,0 +1,17 @@
+         //Long user = acquireUserId();
+         return orgService.cancelOrg(tenant, id, userId);
+     }
+     private Long acquireUserId() {
+         
+         return 1L; /* TODO: use JWT */
+     }
+ }
+---
+
+         return orgService.cancelOrg(tenant, id, userId);
+     }
+     private Long acquireUserId() {
+
+         return 1L; 
+     }
+ }

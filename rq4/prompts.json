@@ -1,0 +1,12 @@
+{
+    "code summarization": "Summarize the following function in one sentence.\n{code}",
+    "code translation": "Translate this code from Java to Python.\n{code}",
+    "test generation": "Write test cases for the following class to check its correctness.\n{code}",
+    "code completion": "Complete the last line of the following code snippet.\n{code}",
+    "fault localization": "Identify the buggy line(s) in the following code that cause it to fail.\n{code}",
+    "program repair": "Fix the bug in the following code snippet to make it work as intended.\n{code}",
+    "vulnerability detection": "Does the following code contain any security vulnerabilities? If yes, describe them.\n{code}",
+    "code review": "Review the following code change and provide suggestions for improvement.\n{code}",
+    "code refactoring": "Optimize the following code to improve performance without changing its output.\n{code}",
+    "code documentation": "Generate inline comments and a docstring for the following function.\n{code}"
+}

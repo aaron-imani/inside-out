@@ -1,0 +1,77 @@
+pub mod outer_module {
+
+    /*!  - Inner block doc */
+    /*!! - Still an inner block doc (but with a bang at the beginning) */
+
+
+    /*   - Only a comment */
+    /**  - Outer block doc (exactly) 2 asterisks */
+    /*** - Only a comment */
+
+    pub mod inner_module {}
+
+    pub mod nested_comments {
+        /* In Rust /* we can /* nest comments */ */ */
+
+
+
+        /*   /* */  /** */  /*! */  */
+        /*!  /* */  /** */  /*! */  */
+        /**  /* */  /** */  /*! */  */
+        pub mod dummy_item {}
+    }
+
+    pub mod degenerate_cases {
+        /*!*/
+
+
+        /**/
+
+        pub mod dummy_item {}
+
+        /***/
+
+    }
+
+    /* The next one isn't allowed because outer doc comments
+       require an item that will receive the doc */
+}
+---
+pub mod outer_module {
+
+    
+    
+
+
+    
+    
+    
+
+    pub mod inner_module {}
+
+    pub mod nested_comments {
+        
+
+
+
+        
+        
+        
+        pub mod dummy_item {}
+    }
+
+    pub mod degenerate_cases {
+        
+
+
+        
+
+        pub mod dummy_item {}
+
+        
+
+    }
+
+    
+
+}

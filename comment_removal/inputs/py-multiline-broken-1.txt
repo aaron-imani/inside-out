@@ -1,0 +1,21 @@
+    to be collected on a test is by appending an attr called locust_task_weight to the
+    *method* object. Therefore, it is imperative that we transfer attrs from the
+    function being wrapped to the wrapper.
+    This decorator is not meant to be used directly, see the task decorator below.
+    """
+    @functools.wraps(func)
+    def wrapper(httpuser, *args, **kwargs):
+        httpuser.environment.stats.num_iterations += 1
+        if hasattr(httpuser, "vu_iteration"):
+            httpuser.vu_iteration += 1
+---
+
+
+
+
+
+    @functools.wraps(func)
+    def wrapper(httpuser, *args, **kwargs):
+        httpuser.environment.stats.num_iterations += 1
+        if hasattr(httpuser, "vu_iteration"):
+            httpuser.vu_iteration += 1

@@ -1,0 +1,11 @@
+         this.styles.push(style.apply(this.styles.peek()));
+     }
+     /**
+      * Pop the current style from this builder's stack
+      */
+     public void popStyle() {
+         this.styles.pop();
+     }
+     /**
+      * Return this builder's current result and clear
+---

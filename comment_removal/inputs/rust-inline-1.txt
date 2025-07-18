@@ -1,0 +1,87 @@
+//! A doc comment that applies to the implicit anonymous module of this crate
+
+pub mod outer_module {
+
+    //!  - Inner line doc
+    //!! - Still an inner line doc (but with a bang at the beginning)
+
+    //   - Only a comment
+    ///  - Outer line doc (exactly 3 slashes)
+    //// - Only a comment
+
+
+    pub mod inner_module {}
+
+    pub mod nested_comments {
+
+        // All three types of block comments can contain or be nested inside
+        // any other type:
+
+        pub mod dummy_item {}
+    }
+
+    pub mod degenerate_cases {
+        // empty inner line doc
+        //!
+
+        // empty inner block doc
+
+        // empty line comment
+        //
+
+        // empty outer line doc
+        ///
+
+        // empty block comment
+
+        pub mod dummy_item {} // empty inline comment
+
+        // empty 2-asterisk block isn't a doc block, it is a block comment
+    }
+
+
+    /// Where is my item?
+}
+---
+pub mod outer_module {
+
+    
+    
+
+    
+    
+    
+
+
+    pub mod inner_module {}
+
+    pub mod nested_comments {
+
+        
+        
+
+        pub mod dummy_item {}
+    }
+
+    pub mod degenerate_cases {
+        
+        
+
+        
+
+        
+        
+
+        
+        
+
+        
+
+        pub mod dummy_item {} 
+
+        
+    }
+
+
+    
+}

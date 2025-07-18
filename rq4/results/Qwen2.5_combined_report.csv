@@ -1,0 +1,11 @@
+Task,Maximum Concept Activation Across Layers
+fault localization,0.5058150188617405
+code summarization,0.49802003826532737
+vulnerability detection,0.4843415490571844
+code completion,0.4737784871409015
+code review,0.4702431117927665
+test generation,0.46053497331973414
+code documentation,0.45018167346930626
+program repair,0.4255723121776966
+code refactoring,0.39710711212649213
+code translation,0.3851698607696816

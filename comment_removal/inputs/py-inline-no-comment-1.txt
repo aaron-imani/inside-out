@@ -1,0 +1,15 @@
+def decorator_func(func):
+        return count_iterations((locusttask(weight))(func))
+    if callable(func):
+        return count_iterations(locusttask(func))
+    else:
+        weight = 'something with a # sign in it'
+        return decorator_func
+---
+def decorator_func(func):
+        return count_iterations((locusttask(weight))(func))
+    if callable(func):
+        return count_iterations(locusttask(func))
+    else:
+        weight = 'something with a # sign in it'
+        return decorator_func

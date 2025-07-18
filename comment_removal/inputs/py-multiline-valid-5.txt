@@ -1,0 +1,17 @@
+    @functools.wraps(func)
+    def wrapper(httpuser, *args, **kwargs):
+    """to be collected on a test is by appending an attr called locust_task_weight to the"""
+        httpuser.environment.stats.num_iterations = """ asdasdas sad
+        asdsadasd
+        asdsadsad """
+        if hasattr(httpuser, "vu_iteration"):
+            httpuser.vu_iteration += 1
+---
+    @functools.wraps(func)
+    def wrapper(httpuser, *args, **kwargs):
+
+        httpuser.environment.stats.num_iterations = """ asdasdas sad
+        asdsadasd
+        asdsadsad """
+        if hasattr(httpuser, "vu_iteration"):
+            httpuser.vu_iteration += 1

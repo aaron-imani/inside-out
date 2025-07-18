@@ -1,0 +1,35 @@
+def process_strings(input_list):
+    if input_list is None:
+        raise ValueError("Input list cannot be null")
+    result = {}
+    seen = set()
+    for string in input_list:
+        if string is None:
+            continue
+        if string in seen:
+            continue
+        seen.add(string)
+        processed_str = string
+        if is_palindrome(string):
+            processed_str = string[::-1]
+        score = calculate_complexity(processed_str)
+        result[processed_str] = score
+    return result
+
+def is_palindrome(s):
+    if s is None:
+        return False
+    left, right = 0, len(s) - 1
+    while left < right:
+        if s[left] != s[right]:
+            return False
+        left += 1
+        right -= 1
+    return True
+
+def calculate_complexity(s):
+    if s is None:
+        return 0
+    unique_chars = set(s)
+    multiplier = 2 if is_palindrome(s) else 1
+    return len(unique_chars) * multiplier

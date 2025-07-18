@@ -1,0 +1,10 @@
+*.db
+*test*
+*temp*
+__pycache__
+.env
+.vscode
+.nfs*
+archive
+tcav/classifiers/*
+tcav/dataset/*

@@ -1,0 +1,67 @@
+package main
+
+import (
+	"errors"
+	"strings"
+)
+
+// processStrings processes a list of strings by removing duplicates,
+// reversing palindromes, and computing a complexity score for each string.
+// It returns a map with processed strings as keys and their complexity scores as values.
+// It returns an error if the input slice is nil.
+func processStrings(input []string) (map[string]int, error) {
+	if input == nil {
+		return nil, errors.New("input list cannot be nil")
+	}
+
+	result := make(map[string]int)
+	seen := make(map[string]struct{})
+
+	// Iterate through the input slice
+	for _, str := range input {
+		if str == "" {
+			// Skip empty entries
+			continue
+		}
+		// Check for duplicates. If already processed, skip.
+		if _, exists := seen[str]; exists {
+			continue
+		}
+		seen[str] = struct{}{}
+
+		processedStr := str
+		// Check if the string is a palindrome
+		if isPalindrome(str) {
+			// If it's a palindrome, reverse it
+			processedStr = reverseString(str)
+		}
+		// Calculate the complexity score
+		score := calculateComplexity(processedStr)
+
+		// Add to the result map
+		result[processedStr] = score
+	}
+	return result, nil
+}
+
+// isPalindrome checks if a string is a palindrome.
+func isPalindrome(s string) bool {
+	if s == "" {
+		return false
+	}
+	left, right := 0, len(s)-1
+	for left < right {
+		if s[left] != s[right] {
+			return false
+		}
+		left++
+		right--
+	}
+	return true
+}
+
+// calculateComplexity calculates a complexity score for a string.
+// Complexity is defined as:
+//   (number of unique characters) * (2 if palindrome, 1 otherwise)
+func calculateComplexity(s string) int {
+	if s == "" {
