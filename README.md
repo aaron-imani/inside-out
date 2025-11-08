@@ -62,7 +62,7 @@ Refer to Table 3 in the paper.
 
 ### RQ3 results for Code Translation to C
 
-| **Concept**           | **LLM** | **$\mathbf{SR^\alpha}$ / CD SR ($\Delta_{rel}$)** | **$\mathbf{SR^\gamma}$/ CA SR  ($\Delta_{rel}$)** |
+| **Concept**           | **LLM** | $\mathbf{SR^\alpha}$ **/ CD SR** ($\mathbf{\Delta_{rel}}$) | $\mathbf{SR^\gamma}$**/ CA SR**  ($\mathbf{\Delta_{rel}}$) |
 |----------------------------|--------------|--------------------------------------------------------|---------------------------------------------------------|
 | Comment   | Code         | 67.44 / 60.47 (-10.34\%)                                 | 69.77 / 65.12 (-6.67\%)        |
 |                            | Generic      | 55.81 / 58.14 (4.17\%)                       | 53.49 / 53.49 (0.00\%)                                 |
