@@ -147,10 +147,13 @@ python run_rq4.py
 If you found this work helpful, please consider citing it using the following:
 
 ```bibtex
-@inproceedings{imani2026insideout,
-  title={Inside Out: Uncovering How Comment Internalization Steers LLMs for Better or Worse},
-  author={Imani, Aaron and Moshirpour, Mohammad and Ahmed, Iftekhar},
-  booktitle={2026 IEEE/ACM 48th International Conference on Software Engineering (ICSE)},
-  year={2026},
-  organization={IEEE}
+@misc{imani2025insideoutuncoveringcomment,
+      title={Inside Out: Uncovering How Comment Internalization Steers LLMs for Better or Worse}, 
+      author={Aaron Imani and Mohammad Moshirpour and Iftekhar Ahmed},
+      year={2025},
+      eprint={2512.16790},
+      archivePrefix={arXiv},
+      primaryClass={cs.SE},
+      url={https://arxiv.org/abs/2512.16790}, 
 }
+```
